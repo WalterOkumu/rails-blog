@@ -294,6 +294,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  ffi
   guard (~> 2.18)
   guard-livereload (~> 2.5, >= 2.5.2)
   importmap-rails

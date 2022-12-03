@@ -69,6 +69,8 @@ group :development do
 
   gem 'rspec-rails'
 
+  gem 'ffi'
+
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18'
 
