@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe Post, type: :model do
+RSpec.describe Post, type: :model do
   before :each do
     @author = User.new(name: 'Andor', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                        bio: 'Rebel fighter from Kenari')
-    @post = Post.new(author: @author, title: 'First Post', text: 'This is a test post')
+    @post = Post.new(author: @author, title: 'Post numero uno', text: 'This is a test post')
   end
 
   it 'title should be present' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User, type: :model do
+RSpec.describe User, type: :model do
   subject { User.new(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Influencer from A.A.') }
 
   it 'name should be present' do
@@ -12,12 +12,12 @@ describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'has it\'s posts_counter greater then or equal to 0' do
+  it 'has it\'s posts_counter greater than or equal to 0' do
     subject.posts_counter = -10
     expect(subject).to_not be_valid
   end
 
-  it 'has it\'s posts_counter set to a value equal to 0 by default' do
+  it 'has it\'s posts_counter set to 0 by default' do
     expect(subject.posts_counter).to eq 0
     expect(subject).to be_valid
   end
