@@ -6,6 +6,16 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+
+  # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
+  #config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+
+  # or, if you're using better_errors:
+  #config.middleware.insert_before Rack::Lock, Rack::LiveReload
+
+  # or, if you're using better_errors with rails 6.
+  #config.middleware.insert_before Rack::Runtime, Rack::LiveReload
+
   config.cache_classes = false
 
   # Do not eager load code on boot.

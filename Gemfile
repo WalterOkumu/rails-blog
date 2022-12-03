@@ -5,8 +5,6 @@ ruby '3.1.2'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
@@ -66,6 +64,14 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.18'
+
+  # Guard::LiveReload automatically reloads your browser when 'view' files are modified.
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :test do
