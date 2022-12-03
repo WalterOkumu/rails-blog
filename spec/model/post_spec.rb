@@ -2,8 +2,9 @@ require 'rails_helper'
 
 describe Post, type: :model do
   before :each do
-    @author = User.new(name: 'Andor', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Rebel fighter from Kenari')
-    @post = Post.new(author: @author, title: 'Post numero uno', text: 'This is the test post')
+    @author = User.new(name: 'Andor', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                       bio: 'Rebel fighter from Kenari')
+    @post = Post.new(author: @author, title: 'Post numero uno', text: 'This is a test post')
   end
 
   it 'title should be present' do
@@ -46,14 +47,6 @@ describe Post, type: :model do
   it 'has it\'s likes_counter greater then or equal to 0' do
     @post.likes_counter = -10
     expect(@post).to_not be_valid
-  end
-
-  it 'has it\'s likes_counter greater then or equal to 0' do
-    10.times { |time| Comment.create(author: @author, post: @post, text: "Test comment numero #{time + 1}") }
-    expect(@post.recent_five.length).to eq 5
-
-    recent_comment_text = @post.recent_five.first.text
-    expect(recent_comment_text).to match 'Test comment numero 10'
   end
 
   it 'can not update posts_counter since it\'s a private method' do
