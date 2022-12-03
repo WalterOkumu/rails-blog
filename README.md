@@ -60,7 +60,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-- bundler install
+- bundle install
 
 ### Usage
 
