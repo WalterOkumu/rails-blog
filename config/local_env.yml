@@ -1,0 +1,2 @@
+POSTGRES_DB_USERNAME: 'backend_app'
+POSTGRES_DB_PASSWORD: 'backend_app'
