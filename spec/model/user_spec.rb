@@ -19,6 +19,7 @@ describe User, type: :model do
 
   it 'has it\'s posts_counter set to a value equal to 0 by default' do
     expect(subject.posts_counter).to eq 0
+    expect(subject).to be_valid
   end
 
   it 'can select recent 3 posts' do
