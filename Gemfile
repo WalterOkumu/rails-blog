@@ -67,6 +67,8 @@ group :development do
 
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
+  gem 'rspec-rails'
+
   # Guard is a command line tool to easily handle events on file system modifications.
   gem 'guard', '~> 2.18'
 
